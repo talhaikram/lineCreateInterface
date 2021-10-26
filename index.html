@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/460/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Js</title>
+    <style>
+        #canvas {
+            background-color: gray
+        }
+    </style>
+</head>
+
+<body>
+    <button onClick="newAnimation()">new Animation</button>
+    <!-- <button onClick="addRect()">Rectangle</button> -->
+    <button onClick="addLine()">Line</button>
+    <!-- <button onClick="addEnter()">Enter</button> -->
+    <!-- <button onClick="addExit()">Exit</button> -->
+
+    <!-- <button onClick="addArrow()">Arrow</button> -->
+    <button onClick="deleteObject()">Delete</button>
+    <!-- <form action="js/test.js"> -->
+        <label for="cars">Choose a Direction:</label>
+        <select name="cars" id="cars" onclick="myFunction()">
+          <option value="Choose">Choose</option>
+          <option value="0">Top</option>
+          <option value="1">Bottom</option>
+          <option value="2">Left</option>
+          <option value="3">Right</option>
+        </select>
+        <label for="cars">Enter/Exit</label>
+        <select name="enter" id="enter" onclick="enterFunction()">
+          <option value="Choose">Choose</option>
+          <option value="0">Enter</option>
+          <option value="1">Exit</option>
+        </select>
+        
+      <!-- </form> -->
+    <canvas id="canvas" width="600" height="300"></canvas>
+    <form id="name_form" class="mt-3">
+        <!-- <label>First Name:</label><input type="text" name="first_name" />
+        <br/>
+        <label>Last Name:</label><input type="text" name="last_name" />
+        <br/> -->
+        <input type="submit" class="submit-btn" alue="submit" />
+    </form>
+    <!-- <button onclick="myFunction()">Click me</button> -->
+</body>
+<script type="module"  src="/static/test.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<!-- <script type="text/javascript">
+    $('#name_form').submit(function(e) {
+        e.preventDefault();
+
+        var data = {};
+        var Form = this;
+
+        $.each(this.elements, function(i, v) {
+            var input = $(v);
+            data[input.attr("name")] = input.val();
+            delete data["undefined"];
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:5000/api/say_name',
+            // headers: {
+            //     'Access-Control-Allow-Origin': 'http://127.0.0.1:5000/api/say_name'
+            // },
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data),
+            context: Form,
+            success: function(callback) {
+                console.log(callback);
+                // Watch out for Cross Site Scripting security issues when setting dynamic content!
+                $(this).text('Hello ' + callback.first_name + ' ' + callback.last_name + '!');
+            },
+            error: function() {
+                $(this).html("error!");
+            }
+        });
+    }); -->
+<!-- </script> -->
+
+</html>
